@@ -161,20 +161,24 @@ Camera Screen ←→ Inventory Screen
 
 ## Testing Strategy
 
-### Unit Tests (Planned)
-- Repository methods
-- Image processing utilities
-- Name normalization logic
-- Category mapping
+### Unit Tests ✅
+- `FoodInventoryRepositoryTest` - Repository methods, filtering, normalization, merging
+- `FoodCategoryTest` - Category parsing from strings
+- `CameraViewModelTest` - Photo capture state, analysis flow
+- `InventoryViewModelTest` - CRUD operations, quantity updates
 
-### Integration Tests (Planned)
-- Room database operations
-- API response parsing
+### Integration Tests ✅
+- `FoodItemDaoTest` - Room database CRUD operations with in-memory DB
 
-### UI Tests (Planned)
-- Navigation flow
-- Camera permission handling
-- Inventory CRUD operations
+### UI Tests ✅
+- `InventoryScreenTest` - Compose UI tests for inventory screen
+
+### Test Libraries
+- **MockK** - Kotlin-first mocking
+- **Turbine** - Flow testing
+- **Truth** - Fluent assertions
+- **Coroutines-test** - Async testing
+- **Room-testing** - In-memory database
 
 ## Dependencies
 
