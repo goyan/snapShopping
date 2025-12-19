@@ -1,0 +1,136 @@
+ANDROID APP BUILD PROMPT (FRIDGE SCAN)
+
+You are a senior Android developer and AI engineer.
+Build an Android application (Kotlin, Jetpack Compose) that allows users to take a photo of their refrigerator and automatically extract a structured list of food items using AI vision.
+
+Core Features
+
+Camera integration
+
+Use CameraX
+
+Allow taking multiple photos (top shelf, bottom shelf, door)
+
+Optional gallery import
+
+AI image analysis
+
+Send the photo(s) to an AI Vision API (Google ML Kit / OpenAI Vision / Gemini)
+
+Detect food items only (ignore plates, bottles without labels, containers)
+
+Return results as structured JSON:
+
+{
+  "items": [
+    {
+      "name": "milk",
+      "category": "dairy",
+      "confidence": 0.92
+    }
+  ]
+}
+
+
+Post-processing logic
+
+Merge duplicates (e.g. “cheese” + “cheddar”)
+
+Normalize names (plural → singular)
+
+Remove low-confidence items (<0.6)
+
+Inventory screen
+
+Editable list of detected items
+
+Add / remove / rename items
+
+Optional quantity field
+
+Local storage
+
+Use Room database
+
+Persist inventory between sessions
+
+UI
+
+Jetpack Compose
+
+Minimal clean design
+
+Loading + error states
+
+Architecture
+
+MVVM
+
+Repository pattern
+
+Coroutines + Flow
+
+Dependency Injection (Hilt)
+
+Security & Performance
+
+API key stored securely
+
+Compress images before upload
+
+Offline fallback: manual input if AI fails
+
+Deliverables
+
+Full project structure
+
+Key Kotlin files
+
+Vision API integration example
+
+Example prompt sent to the Vision model
+
+Instructions to run on Android Studio
+
+Assume this is an MVP that can be extended later with:
+
+Expiration date detection
+
+Recipe suggestions
+
+Cloud sync
+
+🧠 OPTIONAL: VISION MODEL PROMPT (VERY IMPORTANT)
+
+Use this prompt when sending images to the AI vision model:
+
+Analyze the image of a refrigerator.
+List only visible food items.
+Ignore containers, plates, and non-food objects.
+Use generic food names.
+Return a JSON array with:
+- name
+- food category
+- confidence score (0–1)
+Do not include explanations or text outside JSON.
+
+🔥 Tech Stack Recommendation (Best for 2025)
+Feature	Recommended
+Language	Kotlin
+UI	Jetpack Compose
+Camera	CameraX
+AI	Gemini Vision or OpenAI Vision
+Storage	Room
+Networking	Retrofit + OkHttp
+DI	Hilt
+🚀 Next steps (if you want)
+
+I can:
+
+Generate the full Android project skeleton
+
+Write the CameraX + Vision API code
+
+Help you choose Gemini vs OpenAI (cost & accuracy)
+
+Design the inventory UX

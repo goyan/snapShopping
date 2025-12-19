@@ -1,0 +1,205 @@
+Parfait — avec un Samsung S20 + un PC Windows + un MacBook, tu as tout le matériel nécessaire 👍
+Voici les pré-requis clairs et réalistes, classés matériel / logiciels / comptes / compétences, pour développer cette app Android de scan de frigo.
+
+1️⃣ Matériel (tu es déjà OK)
+📱 Téléphone
+
+✅ Samsung Galaxy S20
+
+Android 10+ → parfait pour CameraX & IA
+
+Caméra suffisante pour vision IA
+
+Mode développeur disponible
+
+💻 Ordinateurs
+
+✅ PC Windows ou MacBook
+
+Android Studio fonctionne très bien sur les deux
+
+👉 Tu n’as besoin que d’un seul (Mac ou Windows)
+
+Le Mac est optionnel (utile si tu fais plus tard iOS)
+
+2️⃣ Logiciels indispensables
+🔧 Outil principal
+Android Studio (OBLIGATOIRE)
+
+Télécharger la dernière version stable
+
+Inclut :
+
+SDK Android
+
+Émulateur
+
+ADB
+
+Gradle
+
+👉 Configuration minimale :
+
+Android SDK API 24+
+
+Kotlin activé
+
+Jetpack Compose activé
+
+📦 SDK & outils Android
+
+Dans Android Studio :
+
+Android SDK Platform (dernière version)
+
+Android SDK Build-Tools
+
+Android Emulator
+
+Platform Tools (ADB)
+
+3️⃣ Configuration du téléphone (important)
+
+Sur ton Samsung S20 :
+
+Paramètres → À propos → taper 7x sur Numéro de build
+
+Options développeur :
+
+✅ Débogage USB
+
+✅ Installer via USB
+
+Installer le driver USB Samsung (Windows uniquement)
+
+➡️ Objectif : pouvoir lancer l’app directement depuis Android Studio sur ton téléphone
+
+4️⃣ Comptes & services (IA)
+🧠 IA Vision (au moins un)
+
+Tu as 3 options réalistes :
+
+🥇 Option recommandée : Google Gemini Vision
+
+Compte Google
+
+Accès via Google AI Studio
+
+API clé
+
+Très bon pour nourriture / objets
+
+Intégration Android native
+
+🥈 Alternative : OpenAI Vision
+
+Compte OpenAI
+
+API key
+
+Très bon raisonnement + structuration JSON
+
+Nécessite envoi image via HTTPS
+
+🥉 Local (sans cloud)
+
+Google ML Kit (moins précis pour aliments)
+
+Pas idéal pour reconnaissance fine
+
+👉 Pré-requis minimum :
+
+1 compte
+
+1 clé API
+
+Carte bancaire (même pour usage très faible)
+
+5️⃣ Compétences techniques requises (ordre logique)
+🔹 Indispensables
+
+Si tu coches ces points, tu peux faire l’app :
+
+Bases de Kotlin
+
+Android :
+
+Activities / Composables
+
+Permissions (camera)
+
+HTTP (API REST)
+
+JSON
+
+🔹 Fortement recommandé
+
+Jetpack Compose
+
+Coroutines
+
+CameraX
+
+MVVM
+
+Room (base locale)
+
+🔹 Pas obligatoire au début
+
+Clean Architecture avancée
+
+Tests automatisés
+
+CI/CD
+
+Firebase
+
+6️⃣ Architecture minimale recommandée
+ui/
+ └── ScanScreen.kt
+ └── InventoryScreen.kt
+
+data/
+ └── FoodItem.kt
+ └── FoodDao.kt
+ └── AppDatabase.kt
+
+camera/
+ └── CameraManager.kt
+
+network/
+ └── VisionApiService.kt
+
+viewmodel/
+ └── ScanViewModel.kt
+
+
+➡️ Simple, maintenable, extensible
+
+7️⃣ Accès Internet & sécurité
+
+Connexion internet (pour IA cloud)
+
+API Key :
+
+Stockée dans local.properties
+
+Jamais en dur dans le code
+
+8️⃣ Temps estimé (réaliste)
+Étape	Temps
+Android Studio + SDK	1h
+App caméra simple	3–4h
+Intégration Vision IA	4–6h
+Parsing + liste	2–3h
+Persistance locale	2h
+MVP fonctionnel	1–2 jours
+9️⃣ Ce que tu peux faire dès maintenant
+
+Installer Android Studio
+
+Brancher ton Samsung S20
+
+Créer un projet Empty Compose Activity
+
+Vérifier que l’app se lance sur le téléphone
